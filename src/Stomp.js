@@ -66,7 +66,7 @@ function marshal(command, headers, body) {
 
 export default class Stomp {
 
-  client(url, _debug = false) {
+  static client(url, _debug = false) {
 
     var that, ws, login, passcode
     var counter = 0 // used to index subscribers
