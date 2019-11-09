@@ -1,6 +1,6 @@
 {
   "name": "stomp-websockets",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A fork of Jeff Mesnil stomp-websocket adapted as a npm mobule and webpack compatible",
   "main": "src/Stomp.js",
   "scripts": {

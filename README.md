@@ -4,7 +4,16 @@ A fork of Jeff Mesnil stomp-websocket adapted as a npm mobule and webpack compat
 
 # How to use:
 
+Fist, install stomp-websockets 
+
+```
+npm install stomp-websockets --save
+```
+
+
 ```javascript
+import Stomp from 'stomp-websockets'
+
 let stomp = Stomp.client(serverURL)
 stomp.connect(login, passcode,
     () => { // On success
