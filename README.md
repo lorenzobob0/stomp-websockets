@@ -2,8 +2,9 @@
 
 A fork of Jeff Mesnil stomp-websocket adapted as a npm mobule and webpack compatible
 
-How to use:
+# How to use:
 
+```javascript
 let stomp = Stomp.client(serverURL)
 stomp.connect(login, passcode,
     () => { // On success
@@ -21,4 +22,4 @@ stomp.connect(login, passcode,
         }, 10000) // 10 secondi
     }
 }
-
+```
