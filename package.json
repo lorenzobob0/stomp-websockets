@@ -1,10 +1,11 @@
 {
   "name": "stomp-websockets",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A fork of Jeff Mesnil stomp-websocket adapted as a npm mobule and webpack compatible",
-  "main": "src/Stomp.js",
+  "main": "dist/Stomp.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx babel src/Stomp.js > dist/Stomp.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/lorenzobob0/stomp-websockets/issues"
   },
-  "homepage": "https://github.com/lorenzobob0/stomp-websockets#readme"
+  "homepage": "https://github.com/lorenzobob0/stomp-websockets#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4"
+  }
 }
