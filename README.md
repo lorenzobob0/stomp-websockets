@@ -32,3 +32,12 @@ stomp.connect(login, passcode,
     }
 }
 ```
+
+# How to build
+
+This version of Stomp uses ES6 syntax. To transiple it in ES5 to support older browsers, use thi command:
+
+```
+npm run build
+```
+The generated javascript file is dist/Stomp.js
