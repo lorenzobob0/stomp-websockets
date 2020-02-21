@@ -123,6 +123,11 @@ export default class Stomp {
       ws = new Socket(url)
       ws.binaryType = 'arraybuffer'
       ws.onmessage = onmessage
+      
+      ws.onerror = function (event) {
+        console.error("WebSocket error observed:", event)
+      }
+
       ws.onclose = function () {
         var msg = 'Whoops! Lost connection to ' + url
         debug(msg)
