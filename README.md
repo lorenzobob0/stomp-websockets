@@ -30,7 +30,7 @@ stomp.connect(login, passcode,
             // try to reconnect
         }, 10000) // 10 secondi
     }
-}
+})
 ```
 
 # How to build
