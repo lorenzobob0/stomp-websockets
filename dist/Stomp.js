@@ -132,7 +132,7 @@ var Stomp = function () {
 
       that = {};
 
-      that.connect = function (login_, passcode_, connectCallback, errorCallback) {
+      that.connect = function (headers, connectCallback, errorCallback) {
         debug('Opening Web Socket...');
         var Socket = 'MozWebSocket' in window ? MozWebSocket : WebSocket;
         ws = new Socket(url);
@@ -152,11 +152,9 @@ var Stomp = function () {
         };
         ws.onopen = function () {
           debug('Web Socket Opened...');
-          transmit('CONNECT', { login: login, passcode: passcode });
+          transmit('CONNECT', headers);
           // connectCallback handler will be called from onmessage when a CONNECTED frame is received
         };
-        login = login_;
-        passcode = passcode_;
         that.connectCallback = connectCallback;
       };
 
