@@ -15,7 +15,12 @@ npm install stomp-websockets --save
 import Stomp from 'stomp-websockets'
 
 let stomp = Stomp.client(serverURL)
-stomp.connect(login, passcode,
+let headers = {
+    login: 'my login',
+    passcode: 'my passcode',
+    'client-id': 'myclientid'
+}
+stomp.connect(headers,
     () => { // On success
         stomp.subscribe(topicName, msg => {
             alert('Received message')
@@ -32,6 +37,9 @@ stomp.connect(login, passcode,
     }
 })
 ```
+
+
+
 
 # How to build
 
