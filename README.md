@@ -1,10 +1,10 @@
 # stomp-websockets
 
-A fork of Jeff Mesnil stomp-websocket adapted as a npm mobule and webpack compatible
+A fork of Jeff Mesnil's stomp-websocket adapted as a npm module and webpack compatible
 
 # How to use:
 
-Fist, install stomp-websockets 
+First, install stomp-websockets 
 
 ```
 npm install stomp-websockets --save
@@ -43,9 +43,9 @@ stomp.connect(headers,
 
 # How to build
 
-This version of Stomp uses ES6 syntax. To transiple it in ES5 to support older browsers, use thi command:
+This version of Stomp uses ES6 syntax. To transpile it into ES5 to support older browsers, use this command:
 
 ```
 npm run build
 ```
-The generated javascript file is dist/Stomp.js
+The generated JavaScript file is dist/Stomp.js
